@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả nhóm - FindMate</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo-findmate.jpg" alt="FindMate Logo">
+                <span>FindMate</span>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#about">
+                    <span lang="vi">Giới thiệu</span>
+                    <span lang="en">About</span>
+                </a></li>
+                <li><a href="index.html#how-it-works">
+                    <span lang="vi">Cách dùng</span>
+                    <span lang="en">How it Works</span>
+                </a></li>
+                <li><a href="index.html#audience">
+                    <span lang="vi">Đối tượng</span>
+                    <span lang="en">Audience</span>
+                </a></li>
+                <li><a href="index.html#core-values">
+                    <span lang="vi">Giá trị</span>
+                    <span lang="en">Values</span>
+                </a></li>
+                <li><a href="index.html#testimonials">
+                    <span lang="vi">Đánh giá</span>
+                    <span lang="en">Reviews</span>
+                </a></li>
+                <li><a href="index.html#cta">
+                    <span lang="vi">Đăng ký</span>
+                    <span lang="en">Register</span>
+                </a></li>
+                 <li><a href="groups.html"> <span lang="vi">Nhóm</span>
+                    <span lang="en">Groups</span>
+                </a></li>
+            </ul>
+            
+            <div class="controls">
+                <button id="lang-toggle">EN</button>
+                <button id="dark-mode-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1 lang="vi">Tìm kiếm nhóm</h1>
+        <h1 lang="en">Find Your Group</h1>
+        
+        <p lang="vi">Khám phá các nhóm học tập, thể thao và đi chơi. Sử dụng bộ lọc và tìm kiếm để tìm "vibe" của bạn!</p>
+        <p lang="en">Discover study, sports, and hangout groups. Use the filters and search to find your vibe!</p>
+
+        <div class="filter-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="search-bar" placeholder="Tìm kiếm theo tên, địa điểm, mô tả..." lang="vi">
+                <input type="search" id="search-bar-en" placeholder="Search by name, location, description..." lang="en">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <span lang="vi">Tất cả</span>
+                    <span lang="en">All</span>
+                </button>
+                <button class="filter-btn" data-filter="study">
+                    <span lang="vi">Học tập</span>
+                    <span lang="en">Study</span>
+                </button>
+                <button class="filter-btn" data-filter="sport">
+                    <span lang="vi">Thể thao</span>
+                    <span lang="en">Sports</span>
+                </button>
+                <button class="filter-btn" data-filter="hangout">
+                    <span lang="vi">Đi chơi</span>
+                    <span lang="en">Hangout</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="groups-grid" id="groups-list">
+            
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Ôn thi JLPT N3 cấp tốc</span><span lang="en">JLPT N3 Cram Group</span></h3>
+                    <p><span lang="vi">Nhóm 4 người, ôn luyện giải đề cấp tốc, mục tiêu 120+.</span><span lang="en">4-person group, intensive exam prep, 120+ score goal.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-25 | 19:30</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">15.000 VNĐ</span><span lang="en">$0.60</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">Online</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Học nhóm ReactJS (Tiếng Anh)</span><span lang="en">ReactJS Study Group (English)</span></h3>
+                    <p><span lang="vi">Cùng làm dự án nhỏ mỗi tuần, thảo luận qua Discord, yêu cầu tiếng Anh.</span><span lang="en">Build a small project weekly, discuss on Discord, English required.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-28 | 20:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">Miễn phí</span><span lang="en">Free</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Study Group: Data Structures</span><span lang="en">Study Group: Data Structures</span></h3>
+                    <p><span lang="vi">Group ôn tập cấu trúc dữ liệu, làm bài tập và mock interview. Tại ĐH CNTT.</span><span lang="en">Review data structures, do exercises, and mock interviews. At UIT.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-01 | 09:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>5</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">3.000 VNĐ</span><span lang="en">$0.12</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Luyện nói IELTS 7.0+</span><span lang="en">IELTS Speaking Practice 7.0+</span></h3>
+                    <p><span lang="vi">Tìm 2 bạn cùng trình độ, luyện speaking part 2 & 3 mỗi tối T4 tại quán cafe.</span><span lang="en">Need 2 partners, same level, practice part 2 & 3 every Wed night at cafe.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-29 | 19:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>3</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Học đàn Guitar cơ bản</span><span lang="en">Basic Guitar Group</span></h3>
+                    <p><span lang="vi">Mình biết chơi cơ bản, tìm 3 bạn mới học cùng luyện tập tại KTX Khu B.</span><span lang="en">I know the basics, looking for 3 beginners to practice together at Dorm B.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-24 | 18:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                     <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">Online</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Nhóm Machine Learning Reading</span><span lang="en">Machine Learning Reading Group</span></h3>
+                    <p><span lang="vi">Đọc và thảo luận 1 paper/tuần. Yêu cầu đã có kiến thức nền tảng.</span><span lang="en">Read and discuss 1 paper/week. Background knowledge required.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-02 | 21:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Luyện thi TOEIC 800+</span><span lang="en">TOEIC 800+ Prep</span></h3>
+                    <p><span lang="vi">Cùng giải đề Economy 5, học tại thư viện trường THTP.</span><span lang="en">Practice Economy 5 tests together, study at THTP library.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-27 | 14:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">CLB Tiếng Pháp Giao tiếp</span><span lang="en">French Speaking Club</span></h3>
+                    <p><span lang="vi">Trình độ A2-B1, gặp nhau mỗi Chủ Nhật tại công viên.</span><span lang="en">A2-B1 level, meet every Sunday at the park.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-26 | 16:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>15</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">20.000 VNĐ</span><span lang="en">$0.80</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">Online</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Học Tiếng Trung cơ bản</span><span lang="en">Basic Chinese Learning</span></h3>
+                    <p><span lang="vi">Mình là người Hoa, dạy cho 2 bạn qua Zoom, học từ phát âm.</span><span lang="en">I'm Chinese, will teach 2 people via Zoom, starting from pronunciation.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-05 | 20:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>3</span></div>
+                    </div>
+                     <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="study">
+                <div class="card-header"><span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Làm đồ án UI/UX Figma</span><span lang="en">UI/UX Figma Project</span></h3>
+                    <p><span lang="vi">Tìm 2 bạn design cùng làm 1 project app di động để thêm vào portfolio.</span><span lang="en">Looking for 2 designers to build a mobile app project for portfolio.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-24 | 10:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>3</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">3.000 VNĐ</span><span lang="en">$0.12</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Giao hữu cầu lông (Sáng T7)</span><span lang="en">Friendly Badminton (Sat AM)</span></h3>
+                    <p><span lang="vi">Trình độ trung bình/khá, sân Tinh Võ. Yêu cầu tham gia đều đặn.</span><span lang="en">Intermediate level, Tinh Vo court. Requires consistent attendance.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-27 | 08:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>8</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">30.000 VNĐ</span><span lang="en">$1.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Đá bóng sân 7 (Tối T3)</span><span lang="en">7-a-side Football (Tue PM)</span></h3>
+                    <p><span lang="vi">Team thiếu người, cần 2 bạn đá vị trí hậu vệ/trung tâm. Sân Chảo Lửa.</span><span lang="en">Team needs 2 players, defender/midfielder. Chao Lua pitch.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-28 | 20:30</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>14</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">20.000 VNĐ</span><span lang="en">$0.80</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Chạy bộ 5km (Sáng CN)</span><span lang="en">5km Run (Sun AM)</span></h3>
+                    <p><span lang="vi">Chạy quanh công viên Gia Định, pace 7-8. Dành cho người mới.</span><span lang="en">Run around Gia Dinh park, pace 7-8. Beginner friendly.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-26 | 06:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">Miễn phí</span><span lang="en">Free</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Yoga ngoài trời (Sáng T7)</span><span lang="en">Outdoor Yoga (Sat AM)</span></h3>
+                    <p><span lang="vi">Tập Hatha Yoga tại công viên Lê Văn Tám. Mang theo thảm.</span><span lang="en">Hatha Yoga practice at Le Van Tam park. Bring your own mat.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-01 | 06:30</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>20</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Leo núi trong nhà (Tối T5)</span><span lang="en">Indoor Climbing (Thu PM)</span></h3>
+                    <p><span lang="vi">Mình có vé 1-for-1, tìm 1 bạn đi cùng tại Push Climbing.</span><span lang="en">I have a 1-for-1 ticket, looking for 1 person to join at Push Climbing.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-30 | 19:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>2</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">15.000 VNĐ</span><span lang="en">$0.60</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Tìm bạn tập Gym (Nam)</span><span lang="en">Gym Buddy (Male)</span></h3>
+                    <p><span lang="vi">Tập tại Citigym Bến Vân Đồn, ca 17:00-18:30 mỗi ngày. Cần bạn tập chung cho có động lực.</span><span lang="en">Workout at Citigym Ben Van Don, 5:00-6:30 PM daily. Need a buddy for motivation.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-24 | 17:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>2</span></div>
+                    </div>
+                     <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Lớp học bơi ếch (cấp tốc)</span><span lang="en">Breaststroke Class (Intensive)</span></h3>
+                    <p><span lang="vi">Mình là VĐV, dạy kèm 3 bạn chưa biết bơi tại hồ bơi Lam Sơn. 3 buổi biết bơi.</span><span lang="en">I'm an athlete, will teach 3 non-swimmers at Lam Son pool. 3 sessions guaranteed.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-03 | 18:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">30.000 VNĐ</span><span lang="en">$1.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Bóng rổ giao lưu (nữ)</span><span lang="en">Basketball Pickup Game (Female)</span></h3>
+                    <p><span lang="vi">Tìm 4 bạn nữ chơi vui, không quạu. Sân nhà thi đấu Phú Thọ.</span><span lang="en">Looking for 4 female players, just for fun, no drama. Phu Tho stadium.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-25 | 17:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Đạp xe Sài Gòn đêm</span><span lang="en">Night Cycling Saigon</span></h3>
+                    <p><span lang="vi">Cung đường: Dinh Độc Lập - Bitexco - Cầu Ba Son. Pace chậm.</span><span lang="en">Route: Independence Palace - Bitexco - Ba Son Bridge. Slow pace.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-24 | 21:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>20</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">3.000 VNĐ</span><span lang="en">$0.12</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="sport">
+                <div class="card-header"><span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Ván trượt (Skateboard)</span><span lang="en">Skateboard Meetup</span></h3>
+                    <p><span lang="vi">Gặp nhau tại công viên skate Thủ Thiêm, tập trick cơ bản.</span><span lang="en">Meet at Thu Thiem skate park, practice basic tricks.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-31 | 17:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+
+            <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Cà phê boardgame cuối tuần</span><span lang="en">Weekend Boardgame Cafe</span></h3>
+                    <p><span lang="vi">Tìm 5 người cùng chơi Ma Sói, Mèo Nổ tại một quán cafe yên tĩnh Q.3.</span><span lang="en">Looking for 5 people to play Werewolf, Exploding Kittens at a quiet cafe in D.3.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-26 | 14:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>6</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Triển lãm tranh (Cuối tháng 10)</span><span lang="en">Art Exhibition (End of Oct)</span></h3>
+                    <p><span lang="vi">Tìm 2 bạn nữ đi cùng xem triển lãm "Mộng" tại The Factory.</span><span lang="en">Looking for 2 female friends to see "Mong" exhibition at The Factory.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-25 | 10:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>3</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Chụp ảnh dạo (Chủ Nhật)</span><span lang="en">Photography Walk (Sunday)</span></h3>
+                    <p><span lang="vi">Mình có máy ảnh, tìm 1 bạn mẫu (nam hoặc nữ) chụp concept đường phố.</span><span lang="en">I have a camera, looking for 1 model (male/female) for street concept.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-02 | 15:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>2</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">3.000 VNĐ</span><span lang="en">$0.12</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Đi xem phim (Tối T6)</span><span lang="en">Movie Night (Fri PM)</span></h3>
+                    <p><span lang="vi">Tìm 3 bạn share vé xem phim. Thể loại: Kinh dị. Rạp CGV.</span><span lang="en">Looking for 3 people to share ticket cost. Genre: Horror. CGV Cinema.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-24 | 19:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">Vũng Tàu</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Phượt Vũng Tàu 2N1Đ</span><span lang="en">Vung Tau Trip 2D1N</span></h3>
+                    <p><span lang="vi">Xuất phát sáng T7, về chiều CN. Cần 3 bạn (2 nam 1 nữ) đi xe máy, share tiền xăng/ăn.</span><span lang="en">Leave Sat AM, return Sun PM. Need 3 people (2M 1F) motorbike trip, share gas/food.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-08 | 06:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>4</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">30.000 VNĐ</span><span lang="en">$1.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Săn đồ 2hand (sida)</span><span lang="en">Secondhand Thrifting</span></h3>
+                    <p><span lang="vi">Cần 1 bạn nữ rành các khu chợ đồ cũ, đi cùng mình vào chiều T7 này.</span><span lang="en">Need 1 female friend who knows thrift markets well, to go with me this Sat PM.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-25 | 15:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>2</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Nhóm tình nguyện (Chủ Nhật)</span><span lang="en">Volunteer Group (Sunday)</span></h3>
+                    <p><span lang="vi">Phát cơm cho người vô gia cư tại các quận trung tâm. Tập trung tại Nhà thờ Đức Bà.</span><span lang="en">Distribute food to homeless people in central districts. Meet at Notre Dame.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-26 | 18:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>30</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">10.000 VNĐ</span><span lang="en">$0.40</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Câu lạc bộ Âm nhạc Acoustic</span><span lang="en">Acoustic Music Club</span></h3>
+                    <p><span lang="vi">Tìm 1 bạn chơi Cajon và 2 bạn hát. Gặp tại công viên 23/9 mỗi tối T5.</span><span lang="en">Need 1 Cajon player and 2 singers. Meet at 23/9 Park every Thu PM.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-30 | 19:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>10</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">15.000 VNĐ</span><span lang="en">$0.60</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Lớp học làm gốm (Workshop)</span><span lang="en">Pottery Workshop</span></h3>
+                    <p><span lang="vi">Mình có 2 voucher 20%, tìm 1 bạn đi cùng cho vui.</span><span lang="en">I have 2 20% vouchers, looking for 1 person to join for fun.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-11-01 | 14:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>2</span></div>
+                    </div>
+                    <div class="group-price"><span lang="vi">20.000 VNĐ</span><span lang="en">$0.80</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+             <div class="group-card" data-category="hangout">
+                <div class="card-header"><span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span><span class="location">TP.HCM</span></div>
+                <div class="card-body">
+                    <h3><span lang="vi">Câu lạc bộ Cờ Vua</span><span lang="en">Chess Club</span></h3>
+                    <p><span lang="vi">Giao lưu cờ vua, cờ tướng tại nhà văn hóa. Trình độ bất kỳ.</span><span lang="en">Play chess, xiangqi at the cultural house. All levels welcome.</span></p>
+                </div>
+                <div class="card-footer">
+                    <div class="group-meta">
+                        <div><strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong> <span>2025-10-25 | 18:00</span></div>
+                        <div><strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong> <span>20</span></div>
+                    </div>
+                     <div class="group-price"><span lang="vi">5.000 VNĐ</span><span lang="en">$0.20</span></div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank"><span lang="vi">Tham gia</span><span lang="en">Join</span></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-top-container">
+            <div class="footer-col" id="footer-brand">
+                <img src="img/logo-findmate.jpg" alt="FindMate Logo">
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@findmate8?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61581945898819&locale=vi_VN" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-col" id="footer-company">
+                <h4>
+                    <span lang="vi">Công ty</span>
+                    <span lang="en">Company</span>
+                </h4>
+                <ul>
+                    <li><a href="index.html#about"><span lang="vi">Về chúng tôi</span><span lang="en">About Us</span></a></li>
+                    <li><a href="index.html#core-values"><span lang="vi">Giá trị</span><span lang="en">Values</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-quicklinks">
+                <h4>
+                    <span lang="vi">Liên kết nhanh</span>
+                    <span lang="en">Quick Links</span>
+                </h4>
+                <ul>
+                    <li><a href="index.html#how-it-works"><span lang="vi">Cách hoạt động</span><span lang="en">How it Works</span></a></li>
+                    <li><a href="index.html#audience"><span lang="vi">Đối tượng</span><span lang="en">Audience</span></a></li>
+                    <li><a href="index.html#comparison"><span lang="vi">So sánh</span><span lang="en">Comparison</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-help">
+                <h4>
+                    <span lang="vi">Hỗ trợ</span>
+                    <span lang="en">Help</span>
+                </h4>
+                <ul>
+                    <li><a href="faq.html" target="_blank"><span lang="vi">Câu hỏi (FAQs)</span><span lang="en">FAQs</span></a></li>
+                    <li><a href="contact.html" target="_blank"><span lang="vi">Liên hệ</span><span lang="en">Contact Us</span></a></li>
+                    <li><a href="#"><span lang="vi">Địa điểm</span><span lang="en">Location</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-newsletter">
+                <h4>
+                    <span lang="vi">Nhận tin từ FindMate</span>
+                    <span lang="en">FindMate in your Inbox</span>
+                </h4>
+                <form class="newsletter-form">
+                    <p>
+                        <span lang="vi">Đăng ký để nhận tin tức mới nhất và các nhóm thú vị!</span>
+                        <span lang="en">Sign up for the latest news and interesting new groups!</span>
+                    </p>
+                    <input type="email" placeholder="Nhập email của bạn..." lang="vi">
+                    <input type="email" placeholder="Enter your email..." lang="en">
+                    <button type="submit" lang="vi">Đăng ký</button>
+                    <button type="submit" lang="en">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom-container">
+            <div class="sub-links">
+                <a href="privacy.html" target="_blank"><span lang="vi">Chính sách bảo mật</span><span lang="en">Privacy Policy</span></a> | 
+                <a href="terms.html" target="_blank"><span lang="vi">Điều khoản dịch vụ</span><span lang="en">Terms of Service</span></a>
+            </div>
+            <p class="copyright">
+                © 2025 FindMate. All rights reserved. "Find your vibe - Find your mate."
+            </p>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

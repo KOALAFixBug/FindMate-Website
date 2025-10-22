@@ -1,0 +1,1226 @@
+/* --- 1. Cài đặt Biến & Reset CSS --- */
+:root {
+    --bg-color: #fcfcf9;
+    --text-color: #333;
+    --primary-color: #006A4E;
+    --accent-color: #F9A825;
+    --card-bg: #FFFFFF;
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --border-color: #eee;
+    --hero-overlay: rgba(0, 0, 0, 0.3);
+    --hero-text: #FFFFFF;
+    --table-header-bg: #e0e0e0;
+}
+
+html.dark {
+    --bg-color: #0A192F;
+    --text-color: #E0E0E0;
+    --primary-color: #8BC34A;
+    --accent-color: #FDEBCF;
+    --card-bg: #1D2A43;
+    --nav-bg: rgba(29, 42, 67, 0.85);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --border-color: #3a4a6b;
+    --hero-overlay: rgba(0, 0, 0, 0.5);
+    --hero-text: #FFFFFF;
+    --table-header-bg: #2d3b50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 80px 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; text-align: center; }
+h3 { font-size: 1.5rem; color: var(--accent-color); }
+h4 { font-size: 1.2rem; }
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Ẩn ngôn ngữ không được chọn */
+[lang="en"] { display: none; }
+
+/* --- 2. Header & Navigation --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls button {
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+#lang-toggle {
+    padding: 0 10px;
+    width: auto;
+}
+
+#dark-mode-toggle {
+    font-size: 1.2rem;
+}
+
+.controls button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* --- 3. Hero Section (Manual Slideshow) --- */
+#hero {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--hero-text);
+    padding: 0;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hero-overlay);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--hero-text);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+/* --- 4. About Section --- */
+#about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-text li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-text li i {
+    color: var(--accent-color);
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* --- 5. Problem Section --- */
+#problem {
+    background-color: var(--card-bg);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.problem-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.problem-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.problem-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.solution {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--accent-color);
+}
+
+.solution strong {
+    color: var(--primary-color);
+}
+
+/* --- 6. How It Works Section --- */
+#how-it-works {
+    background-color: var(--bg-color);
+}
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+}
+
+.step-card .step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 3px solid var(--bg-color);
+}
+
+.step-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.step-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* --- 7. Target Audience Section --- */
+#audience {
+    background-color: var(--card-bg);
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.audience-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.audience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.audience-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.audience-card h3 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.audience-card ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.audience-card li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.audience-card li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+
+/* --- 8. Core Values Section --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-card .icon {
+    font-size: 4rem;
+    padding: 40px 20px 20px 20px;
+    color: var(--accent-color);
+}
+
+.value-card h3 {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.value-card p {
+    padding: 30px;
+    font-size: 0.95rem;
+}
+
+/* --- 9. Competitor Analysis Section --- */
+#comparison {
+    background-color: var(--card-bg);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: var(--bg-color);
+}
+
+.comparison-table tr:hover {
+    background-color: var(--border-color);
+}
+
+.comparison-table .feature {
+    font-weight: 500;
+}
+
+/* --- 10. Advantages Section --- */
+#advantages {
+    background-color: var(--bg-color);
+}
+
+.advantages-list {
+    max-width: 900px;
+    margin: 40px auto 0;
+    list-style: none;
+}
+
+.advantages-list li {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.advantages-list li:hover {
+    transform: translateX(10px);
+}
+
+.advantages-list i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+}
+
+/* --- 11. Testimonials Section --- */
+#testimonials {
+    background-color: var(--card-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--accent-color);
+    position: relative;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0.5;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card .author {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.testimonial-card .role {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* --- 12. SWOT Section --- */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.swot-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid;
+}
+
+.swot-card h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.swot-card ul {
+    list-style: none;
+}
+
+.swot-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.swot-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#swot-s { border-color: #4CAF50; }
+#swot-s h3 { color: #4CAF50; }
+#swot-s li::before { background-color: #4CAF50; }
+
+#swot-w { border-color: #FFC107; }
+#swot-w h3 { color: #FFC107; }
+#swot-w li::before { background-color: #FFC107; }
+
+#swot-o { border-color: #03A9F4; }
+#swot-o h3 { color: #03A9F4; }
+#swot-o li::before { background-color: #03A9F4; }
+
+#swot-t { border-color: #F44336; }
+#swot-t h3 { color: #F44336; }
+#swot-t li::before { background-color: #F44336; }
+
+
+/* --- 13. CTA Section --- */
+#cta {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #fff;
+}
+
+#cta h2 {
+    color: #fff;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: #333;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* --- 14. Footer (Porto's Style) --- */
+footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 60px 5% 30px 5%;
+    color: var(--text-color);
+}
+
+.footer-top-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto 50px auto;
+}
+
+#footer-brand img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#footer-brand .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--border-color);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+    font-size: 1.2rem;
+}
+
+#footer-brand .social-links a:hover {
+    color: #fff;
+    background-color: var(--accent-color);
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px;
+}
+
+#footer-newsletter .newsletter-form p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+#footer-newsletter .newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#footer-newsletter .newsletter-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+#footer-newsletter .newsletter-form button:hover {
+    background-color: var(--accent-color);
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.footer-bottom-container .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    order: 2;
+}
+
+.footer-bottom-container .sub-links {
+    flex-basis: 100%;
+    text-align: center;
+    order: 1;
+}
+
+.footer-bottom-container .sub-links a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 0.85rem;
+}
+
+/* --- 15. Back to Top Button --- */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- 16. Responsive Design --- */
+@media (max-width: 992px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    #hero h1 { font-size: 3rem; }
+    #hero p { font-size: 1.2rem; }
+
+    .problem-grid,
+    .how-it-works-grid,
+    .audience-grid,
+    .values-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-top-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #footer-brand { grid-column: 1 / -1; text-align: center; }
+    #footer-brand img { margin: 0 auto 20px auto; }
+    #footer-newsletter { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: left 0.4s ease-in-out;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 20px;
+    }
+    
+    .controls {
+        margin-left: auto;
+    }
+    
+    nav {
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    #about .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        margin-top: 30px;
+    }
+
+    .problem-grid,
+    .how-it-works-grid,
+    .audience-grid,
+    .values-grid,
+    .testimonials-grid,
+    .swot-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr { 
+        display: block; 
+    }
+    
+    .comparison-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .comparison-table tr { 
+        border: 1px solid var(--border-color);
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    
+    .comparison-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    
+    .comparison-table td::before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .comparison-table td:nth-of-type(1)::before { content: attr(data-label); }
+    .comparison-table td:nth-of-type(2)::before { content: attr(data-label); }
+    .comparison-table td:nth-of-type(3)::before { content: attr(data-label); }
+    .comparison-table td:nth-of-type(4)::before { content: attr(data-label); }
+
+    .footer-top-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-col h4 {
+        text-align: center;
+    }
+    
+    .footer-bottom-container {
+        flex-direction: column;
+    }
+    .footer-bottom-container .sub-links { order: 1; }
+    .footer-bottom-container .copyright { order: 2; }
+}
+
+/* --- 17. Popular Groups Section --- */
+#popular-groups {
+    background-color: var(--bg-color);
+}
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.group-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+}
+
+.group-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.group-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.group-card .tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.group-card .tag-study {
+    background-color: #03A9F4; /* Blue */
+}
+
+.group-card .tag-sport {
+    background-color: #F44336; /* Red */
+}
+
+.group-card .location {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.group-card .card-body {
+    padding: 20px;
+    flex-grow: 1; /* Làm cho phần body co giãn để đẩy footer xuống */
+}
+
+.group-card .card-body h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.group-card .card-body p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.group-card .card-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép wrap trên mobile */
+    gap: 15px;
+}
+
+.group-card .group-meta {
+    font-size: 0.85rem;
+}
+
+.group-card .group-meta div {
+    margin-bottom: 5px;
+}
+
+.group-card .group-meta strong {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.group-card .group-meta span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.group-card .group-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.group-card .btn-join {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.group-card .btn-join:hover {
+    background-color: var(--accent-color);
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Responsive cho Group Cards */
+@media (max-width: 992px) {
+    .groups-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .groups-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .group-card .card-footer {
+        flex-direction: column; /* Xếp chồng các item trong footer */
+        align-items: stretch; /* Kéo dãn các item */
+    }
+    
+    .group-card .btn-join {
+        width: 100%; /* Nút bấm chiếm toàn bộ chiều rộng */
+    }
+}
+
+/* Thêm class này để ẩn/hiện khi lọc */
+.group-card.hide {
+    display: none;
+}
+
+/* CSS cho nút "Xem tất cả" */
+.see-all-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.see-all-btn {
+    background-color: var(--accent-color);
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.see-all-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.see-all-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.see-all-btn:hover i {
+    transform: translateX(5px);
+}

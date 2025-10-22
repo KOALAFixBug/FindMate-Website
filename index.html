@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMate - Find Your Vibe, Find Your Mate</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo-findmate.jpg" alt="FindMate Logo">
+                <span>FindMate</span>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">
+                    <span lang="vi">Giới thiệu</span>
+                    <span lang="en">About</span>
+                </a></li>
+                <li><a href="#how-it-works">
+                    <span lang="vi">Cách dùng</span>
+                    <span lang="en">How it Works</span>
+                </a></li>
+                <li><a href="#audience">
+                    <span lang="vi">Đối tượng</span>
+                    <span lang="en">Audience</span>
+                </a></li>
+                <li><a href="#core-values">
+                    <span lang="vi">Giá trị</span>
+                    <span lang="en">Values</span>
+                </a></li>
+                <li><a href="#testimonials">
+                    <span lang="vi">Đánh giá</span>
+                    <span lang="en">Reviews</span>
+                </a></li>
+                <li><a href="#cta">
+                    <span lang="vi">Đăng ký</span>
+                    <span lang="en">Register</span>
+                </a></li>
+            </ul>
+            
+            <div class="controls">
+                <button id="lang-toggle">EN</button>
+                <button id="dark-mode-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="slideshow-container">
+
+                <div class="hero-slide fade" style="background-image: url('img/hero-1.jpg');"></div>
+                <div class="hero-slide fade" style="background-image: url('img/hero-2.jpg');"></div>
+                <div class="hero-slide fade" style="background-image: url('img/hero-3.jpg');"></div>
+                <div class="hero-slide fade" style="background-image: url('img/hero-4.jpg');"></div>
+                
+                <div class="hero-content">
+                    <h1>FINDMATE</h1>
+                    <p>"Find your vibe - Find your mate."</p>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="about-text">
+                    <h2>
+                        <span lang="vi">FindMate là gì?</span>
+                        <span lang="en">What is FindMate?</span>
+                    </h2>
+                    <p>
+                        <span lang="vi">FindMate là nền tảng kết nối và ghép nhóm trực tuyến, giúp sinh viên và người trẻ tìm được bạn đồng hành phù hợp cho mọi hoạt động.</span>
+                        <span lang="en">FindMate is an online connection and group-matching platform, helping students and young people find suitable companions for all activities.</span>
+                    </p>
+                    <ul>
+                        <li><i class="fa-solid fa-bullseye"></i>
+                            <div>
+                                <strong><span lang="vi">Mục tiêu:</span><span lang="en">Goal:</span></strong>
+                                <span lang="vi"> Xây dựng cộng đồng kết nối tích cực, giúp bạn tìm "mate" để học tập, thể thao, hoặc đi chơi.</span>
+                                <span lang="en"> Build a positive, connected community, helping you find a "mate" for studying, sports, or leisure.</span>
+                            </div>
+                        </li>
+                        <li><i class="fa-solid fa-users"></i>
+                            <div>
+                                <strong><span lang="vi">Loại hình:</span><span lang="en">Type:</span></strong>
+                                <span lang="vi"> Dịch vụ Social Matching (ghép đôi xã hội), không phải hẹn hò.</span>
+                                <span lang="en"> Social Matching Service, not a dating app.</span>
+                            </div>
+                        </li>
+                         <li><i class="fa-solid fa-heart"></i>
+                            <div>
+                                <strong><span lang="vi">Khẩu hiệu:</span><span lang="en">Slogan:</span></strong>
+                                <span> “Find your vibe - Find your mate.”</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="img/about-placeholder.png" alt="FindMate Logo Illustration">
+                </div>
+            </div>
+        </section>
+
+        <section id="problem">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Bối cảnh & Vấn đề</span>
+                    <span lang="en">Context & The Problem</span>
+                </h2>
+                <p style="text-align: center; max-width: 800px; margin: 10px auto 0 auto;">
+                    <span lang="vi">Giữa nhịp sống hối hả, giới trẻ đang dần mất kết nối thực tế. FindMate ra đời để giải quyết những khó khăn này.</span>
+                    <span lang="en">In today's fast-paced life, young people are losing real-world connections. FindMate was born to solve these difficulties.</span>
+                </p>
+
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>
+                            <span lang="vi">Khó tìm người cùng lịch rảnh</span>
+                            <span lang="en">Hard to Find People with Free Time</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Muốn học nhóm, chơi thể thao nhưng bạn bè đều bận, dẫn đến mất động lực.</span>
+                            <span lang="en">Want to study or play sports, but friends are busy, leading to a loss of motivation.</span>
+                        </p>
+                        <div class="solution">
+                            <strong><span lang="vi">Giải pháp:</span><span lang="en">Solution:</span></strong>
+                            <span lang="vi"> Hệ thống lọc thông minh theo thời gian rảnh và mục tiêu cụ thể.</span>
+                            <span lang="en"> Smart filtering system based on free time and specific goals.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>
+                            <span lang="vi">Ngại kết bạn trực tiếp</span>
+                            <span lang="en">Shy About Making Friends Directly</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Môi trường mới (đại học, công ty) khiến việc bắt chuyện trở nên khó khăn, thiếu cơ hội giao tiếp.</span>
+                            <span lang="en">New environments (university, workplace) make it hard to start conversations, lacking communication opportunities.</span>
+                        </p>
+                        <div class="solution">
+                            <strong><span lang="vi">Giải pháp:</span><span lang="en">Solution:</span></strong>
+                            <span lang="vi"> Tạo một môi trường "có sẵn", thân thiện, nơi mọi người đều chung mục đích kết nối.</span>
+                            <span lang="en"> Create a friendly, "ready-made" environment where everyone shares the purpose of connecting.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <h3>
+                            <span lang="vi">Sợ các app "ảo", bị "leo cây"</span>
+                            <span lang="en">Fear of "Virtual" Apps & Getting Flaked On</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Mất niềm tin vào các nền tảng vì bị "bể kèo", lừa đảo, hoặc mục đích không lành mạnh (dating trá hình).</span>
+                            <span lang="en">Losing trust in platforms due to canceled plans, scams, or unhealthy hidden motives (disguised dating).</span>
+                        </p>
+                        <div class="solution">
+                            <strong><span lang="vi">Giải pháp:</span><span lang="en">Solution:</span></strong>
+                            <span lang="vi"> Tập trung vào học/chơi, không dating. Mô hình có phí tạo động lực và hạn chế "bể kèo".</span>
+                            <span lang="en"> Focus on study/play, not dating. A paid model creates commitment and reduces flaking.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Hoạt động như thế nào?</span>
+                    <span lang="en">How It Works?</span>
+                </h2>
+                <div class="how-it-works-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h3>
+                            <span lang="vi">Tạo hồ sơ "Vibe"</span>
+                            <span lang="en">Create Your "Vibe" Profile</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Đăng ký và cho chúng tôi biết sở thích, mục tiêu và thời gian rảnh của bạn.</span>
+                            <span lang="en">Sign up and tell us your interests, goals, and when you're free.</span>
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <h3>
+                            <span lang="vi">Tìm kiếm hoặc Tạo nhóm</span>
+                            <span lang="en">Find or Create a Group</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Lướt xem các nhóm có sẵn (học, thể thao) hoặc tự tạo nhóm của riêng bạn.</span>
+                            <span lang="en">Browse existing groups (study, sports) or create your own group.</span>
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>
+                            <span lang="vi">Kết nối & Gặp gỡ</span>
+                            <span lang="en">Connect & Meet Up</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Tham gia nhóm, trò chuyện và sắp xếp một buổi gặp gỡ ngoài đời thực thật an toàn.</span>
+                            <span lang="en">Join the group, chat, and arrange a safe, real-world meet-up.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="audience">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Đối tượng khách hàng</span>
+                    <span lang="en">Target Audience</span>
+                </h2>
+                <p style="text-align: center; max-width: 800px; margin: 10px auto 0 auto;">
+                    <span lang="vi">FindMate hướng đến những người trẻ năng động, mong muốn mở rộng mối quan hệ xã hội một cách lành mạnh.</span>
+                    <span lang="en">FindMate targets dynamic young people who want to expand their social connections in a healthy way.</span>
+                </p>
+
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>
+                            <span lang="vi">Sinh viên</span>
+                            <span lang="en">Students</span>
+                        </h3>
+                        <ul>
+                            <li><span lang="vi">Thích khám phá, dễ cô đơn.</span><span lang="en">Explorers, often feel lonely.</span></li>
+                            <li><span lang="vi">Nhu cầu: Tìm bạn học, nhóm thể thao, nhóm đi chơi.</span><span lang="en">Needs: Study buddies, sports groups, hangout groups.</span></li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3>
+                            <span lang="vi">Giáo viên / Giảng viên trẻ</span>
+                            <span lang="en">Young Teachers / Lecturers</span>
+                        </h3>
+                        <ul>
+                            <li><span lang="vi">Có thời gian rảnh ngoài giờ dạy.</span><span lang="en">Free time outside teaching hours.</span></li>
+                            <li><span lang="vi">Nhu cầu: Tìm nhóm học ngoại ngữ, đồng nghiệp trao đổi.</span><span lang="en">Needs: Language study groups, colleagues for skill exchange.</span></li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h3>
+                            <span lang="vi">Người đi làm trẻ</span>
+                            <span lang="en">Young Professionals</span>
+                        </h3>
+                        <ul>
+                            <li><span lang="vi">Môi trường làm việc căng thẳng.</span><span lang="en">Stressful work environment.</span></li>
+                            <li><span lang="vi">Nhu cầu: Tìm nhóm thể thao, thư giãn, chia sẻ kỹ năng.</span><span lang="en">Needs: Sports groups, relaxation, skill-sharing.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="core-values">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Giá trị cốt lõi</span>
+                    <span lang="en">Core Values</span>
+                </h2>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+                        <h3>
+                            <span lang="vi">Kết nối lành mạnh</span>
+                            <span lang="en">Healthy Connection</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">FindMate không phải app hẹn hò. Chúng tôi tập trung vào kết nối nhóm (học tập, thể thao) trong một môi trường an toàn, thân thiện.</span>
+                            <span lang="en">FindMate is not a dating app. We focus on group connections (study, sports) in a safe and friendly environment.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="icon"><i class="fa-solid fa-handshake-simple"></i></div>
+                        <h3>
+                            <span lang="vi">Tương tác thật</span>
+                            <span lang="en">Real Interaction</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Chúng tôi khuyến khích tạo nhóm thật - gặp gỡ thật - hoạt động thật, giúp bạn mở rộng mối quan hệ ngoài đời thực.</span>
+                            <span lang="en">We encourage real groups, real meetings, and real activities, helping you expand your real-life social circle.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>
+                            <span lang="vi">Cộng đồng tích cực</span>
+                            <span lang="en">Positive Community</span>
+                        </h3>
+                        <p>
+                            <span lang="vi">Đây là nơi mọi người cùng nhau phát triển kỹ năng, duy trì thói quen lành mạnh và giúp nhau cùng tiến bộ.</span>
+                            <span lang="en">This is a place where people develop skills, maintain healthy habits, and help each other progress together.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison">
+            <div class="container">
+                <h2>
+                    <span lang="vi">So sánh với các nền tảng tương tự</span>
+                    <span lang="en">Competitor Analysis</span>
+                </h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th><span lang="vi">Tiêu chí</span><span lang="en">Criteria</span></th>
+                                <th>FindMate</th>
+                                <th>Tinder / Bumble</th>
+                                <th>Facebook Group</th>
+                                <th>Meetup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature" data-label="Criteria"><span lang="vi">Mục đích chính</span><span lang="en">Primary Goal</span></td>
+                                <td data-label="FindMate"><span lang="vi">Ghép nhóm học tập, thể thao, giao lưu lành mạnh</span><span lang="en">Match for study, sports, healthy social interaction</span></td>
+                                <td data-label="Tinder / Bumble"><span lang="vi">Hẹn hò, làm quen cá nhân</span><span lang="en">Dating, individual acquaintance</span></td>
+                                <td data-label="Facebook Group"><span lang="vi">Thảo luận trực tuyến, khó tổ chức hoạt động thật</span><span lang="en">Online discussion, difficult to organize real activities</span></td>
+                                <td data-label="Meetup"><span lang="vi">Kết nối sự kiện, chủ yếu tại nước ngoài</span><span lang="en">Event connection, primarily abroad</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature" data-label="Criteria"><span lang="vi">Hình thức kết nối</span><span lang="en">Connection Method</span></td>
+                                <td data-label="FindMate"><span lang="vi">Tạo nhóm nhỏ (3–6 người) theo sở thích & lịch rảnh</span><span lang="en">Small group (3–6 people) based on interests & free time</span></td>
+                                <td data-label="Tinder / Bumble"><span lang="vi">Ghép 1–1 theo vị trí</span><span lang="en">1-to-1 matching by location</span></td>
+                                <td data-label="Facebook Group"><span lang="vi">Bình luận, đăng bài, tương tác hạn chế</span><span lang="en">Comments, posts, limited interaction</span></td>
+                                <td data-label="Meetup"><span lang="vi">Tham gia sự kiện lớn (20–100 người)</span><span lang="en">Participate in large events (20–100 people)</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature" data-label="Criteria"><span lang="vi">Tính an toàn & kiểm duyệt</span><span lang="en">Safety & Moderation</span></td>
+                                <td data-label="FindMate"><span lang="vi">Cao – chỉ kết nối nhóm có mục tiêu rõ ràng</span><span lang="en">High – only connects groups with clear objectives</span></td>
+                                <td data-label="Tinder / Bumble"><span lang="vi">Thấp – có yếu tố hẹn hò, rủi ro cao</span><span lang="en">Low – dating element, high risk</span></td>
+                                <td data-label="Facebook Group"><span lang="vi">Trung bình – phụ thuộc quản trị viên</span><span lang="en">Medium – depends on administrators</span></td>
+                                <td data-label="Meetup"><span lang="vi">Trung bình – chưa phổ biến ở Việt Nam</span><span lang="en">Medium – not popular in Vietnam yet</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Lợi thế cạnh tranh của FindMate</span>
+                    <span lang="en">FindMate's Competitive Advantages</span>
+                </h2>
+                
+                <ul class="advantages-list">
+                    <li>
+                        <i class="fa-solid fa-check-double"></i>
+                        <p>
+                            <span lang="vi"><strong>Đúng nhu cầu:</strong> Tập trung vào nhu cầu thực tế của người Việt trẻ (học, thể thao) thay vì hẹn hò.</span>
+                            <span lang="en"><strong>Right Focus:</strong> Targets the real needs of young Vietnamese (study, sports) instead of dating.</span>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <p>
+                            <span lang="vi"><strong>An toàn, tin cậy cao:</strong> Không mang yếu tố "dating", giảm rủi ro tiêu cực, tạo niềm tin cho người dùng.</span>
+                            <span lang="en"><strong>High Safety & Trust:</strong> No "dating" elements, reducing negative risks and building user trust.</span>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>
+                            <span lang="vi"><strong>Đơn giản & hiệu quả:</strong> Giao diện thân thiện, hoạt động theo nhóm nhỏ, dễ kết bạn và duy trì lâu dài.</span>
+                            <span lang="en"><strong>Simple & Effective:</strong> Friendly UI, operates in small groups,
+                            making it easy to make and maintain friendships.</span>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-school"></i>
+                        <p>
+                            <span lang="vi"><strong>Phù hợp triển khai:</strong> Lý tưởng cho môi trường học đường và các công ty có văn hóa trẻ.</span>
+                            <span lang="en"><strong>Perfectly Deployable:</strong> Ideal for academic environments and companies with a young culture.</span>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p>
+                            <span lang="vi"><strong>Phát triển bền vững:</strong> Dễ dàng mở rộng thành nền tảng hỗ trợ sức khỏe tinh thần và kết nối xã hội.</span>
+                            <span lang="en"><strong>Sustainable Growth:</strong> Easily expandable into a platform for mental wellness and social connection.</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Người dùng nói gì về FindMate?</span>
+                    <span lang="en">What Our Users Say?</span>
+                </h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>
+                            <span lang="vi">"Mình đã tìm được một nhóm học Tiếng Anh siêu chất lượng qua FindMate. Không còn cảnh tự học một mình nữa!"</span>
+                            <span lang="en">"I found a high-quality English study group through FindMate. No more studying alone!"</span>
+                        </p>
+                        <div class="author">
+                            <span lang="vi">Minh Anh</span><span lang="en">Minh Anh</span>
+                        </div>
+                        <div class="role">
+                            <span lang="vi">Sinh viên năm 2, ĐH CNTT</span><span lang="en">2nd Year Student, UIT</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>
+                            <span lang="vi">"Là người đi làm, mình rất khó tìm bạn chơi cầu lông. FindMate đã giúp mình kết nối với 3 người khác cùng chung sở thích."</span>
+                            <span lang="en">"As a professional, it was hard to find badminton partners. FindMate helped me connect with 3 others who love the sport."</span>
+                        </p>
+                        <div class="author">
+                            <span lang="vi">Quốc Bảo</span><span lang="en">Quoc Bao</span>
+                        </div>
+                        <div class="role">
+                            <span lang="vi">Lập trình viên, Quận 1</span><span lang="en">Developer, District 1</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>
+                            <span lang="vi">"An toàn, lành mạnh và đúng trọng tâm. Mình thích vì app không phải là app hẹn hò."</span>
+                            <span lang="en">"Safe, healthy, and focused. I love that it's not a dating app."</span>
+                        </p>
+                        <div class="author">
+                            <span lang="vi">Thu Trang</span><span lang="en">Thu Trang</span>
+                        </div>
+                        <div class="role">
+                            <span lang="vi">Giảng viên trẻ, ĐH KHXH&NV</span><span lang="en">Young Lecturer, USSH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="swot">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Phân tích SWOT</span>
+                    <span lang="en">SWOT Analysis</span>
+                </h2>
+                <div class="swot-grid">
+                    <div class="swot-card" id="swot-s">
+                        <h3><span lang="vi">S - Điểm mạnh (Strengths)</span><span lang="en">S - Strengths</span></h3>
+                        <ul>
+                            <li><span lang="vi">Ý tưởng mới lạ, lành mạnh, khác biệt so với ứng dụng hẹn hò.</span><span lang="en">New, healthy, and different concept compared to dating apps.</span></li>
+                            <li><span lang="vi">Hướng đến giới trẻ năng động – nhóm dùng mạng xã hội nhiều nhất.</span><span lang="en">Targets dynamic youth – the most active social media users.</span></li>
+                            <li><span lang="vi">Mở rộng linh hoạt: học tập, thể thao, du lịch, kỹ năng sống.</span><span lang="en">Flexible expansion: study, sports, travel, life skills.</span></li>
+                        </ul>
+                    </div>
+                    <div class="swot-card" id="swot-w">
+                        <h3><span lang="vi">W - Điểm yếu (Weaknesses)</span><span lang="en">W - Weaknesses</span></h3>
+                        <ul>
+                            <li><span lang="vi">Khó thu hút người dùng ban đầu nếu chưa có cộng đồng lớn.</span><span lang="en">Difficulty attracting initial users without a large community.</span></li>
+                            <li><span lang="vi">Cần kiểm duyệt kỹ hồ sơ người dùng để đảm bảo tính an toàn.</span><span lang="en">Requires careful user profile moderation for safety.</span></li>
+                            <li><span lang="vi">Chi phí marketing cao để tạo độ tin cậy.</span><span lang="en">High marketing costs to build trust.</span></li>
+                        </ul>
+                    </div>
+                    <div class="swot-card" id="swot-o">
+                        <h3><span lang="vi">O - Cơ hội (Opportunities)</span><span lang="en">O - Opportunities</span></h3>
+                        <ul>
+                            <li><span lang="vi">Xu hướng kết nối xã hội lành mạnh, “no dating app” đang được ưa chuộng.</span><span lang="en">Growing trend for healthy "no dating app" social connections.</span></li>
+                            <li><span lang="vi">Môi trường đại học, công ty trẻ là thị trường tiềm năng khổng lồ.</span><span lang="en">Universities and young corporate environments are huge potential markets.</span></li>
+                            <li><span lang="vi">Có thể kết hợp tổ chức sự kiện offline.</span><span lang="en">Can be combined with organizing offline events.</span></li>
+                        </ul>
+                    </div>
+                    <div class="swot-card" id="swot-t">
+                        <h3><span lang="vi">T - Thách thức (Threats)</span><span lang="en">T - Threats</span></h3>
+                        <ul>
+                            <li><span lang="vi">Cạnh tranh với các nền tảng như Meetup, Facebook Group, Discord.</span><span lang="en">Competition with platforms like Meetup, Facebook Group, Discord.</span></li>
+                            <li><span lang="vi">Người dùng dễ hiểu lầm mục đích (ghép đôi) nếu truyền thông không rõ.</span><span lang="en">Users might misunderstand the purpose (as dating) if communication is unclear.</span></li>
+                            <li><span lang="vi">Cần bảo vệ dữ liệu cá nhân chặt chẽ.</span><span lang="en">Strict personal data protection is needed.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Tìm "Vibe", Gặp "Mate" Ngay!</span>
+                    <span lang="en">Find Your "Vibe", Meet Your "Mate" Now!</span>
+                </h2>
+                <p>
+                    <span lang="vi">Đừng để sự cô đơn cản trở bạn. Hãy tham gia cộng đồng FindMate để tìm những người bạn đồng hành tuyệt vời cho học tập, thể thao và cuộc sống.</span>
+                    <span lang="en">Don't let loneliness hold you back. Join the FindMate community to find amazing companions for study, sports, and life.</span>
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe95seO5lCM4y4dZin0mB59UO9p1ZV3TruzOU6YH4hJ8UhJbA/viewform?usp=dialog" class="cta-button" target="_blank">
+                    <span lang="vi">Đăng ký tham gia</span>
+                    <span lang="en">Register Now</span>
+                </a>
+            </div>
+        </section>
+
+<section id="cta">
+            </section>
+
+        <section id="popular-groups">
+<section id="popular-groups">
+            <div class="container">
+                <h2>
+                    <span lang="vi">Nhóm & Gói phổ biến</span>
+                    <span lang="en">Popular Groups & Packages</span>
+                </h2>
+                <div class="groups-grid">
+                    
+                    <div class="group-card" data-category="study">
+                        <div class="card-header">
+                            <span class="tag tag-study"><span lang="vi">Học tập</span><span lang="en">Study</span></span>
+                            <span class="location">TP.HCM</span>
+                        </div>
+                        <div class="card-body">
+                            <h3><span lang="vi">Ôn thi JLPT N3 cấp tốc</span><span lang="en">JLPT N3 Cram Group</span></h3>
+                            <p>
+                                <span lang="vi">Nhóm 4 người, ôn luyện giải đề cấp tốc, mục tiêu 120+. Đã có 1 thành viên.</span>
+                                <span lang="en">4-person group, intensive exam prep, 120+ score goal. 1 member already.</span>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="group-meta">
+                                <div>
+                                    <strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong>
+                                    <span>2025-10-25 | 19:30</span>
+                                </div>
+                                <div>
+                                    <strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <div class="group-price">
+                                <span lang="vi">15.000 VNĐ</span>
+                                <span lang="en">$0.60</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank">
+                                <span lang="vi">Tham gia</span>
+                                <span lang="en">Join</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="group-card" data-category="sport">
+                        <div class="card-header">
+                            <span class="tag tag-sport"><span lang="vi">Thể thao</span><span lang="en">Sports</span></span>
+                            <span class="location">TP.HCM</span>
+                        </div>
+                        <div class="card-body">
+                            <h3><span lang="vi">Giao hữu cầu lông (Sáng T7)</span><span lang="en">Friendly Badminton (Sat AM)</span></h3>
+                            <p>
+                                <span lang="vi">Trình độ trung bình/khá, sân Tinh Võ. Yêu cầu tham gia đều đặn.</span>
+                                <span lang="en">Intermediate level, Tinh Vo court. Requires consistent attendance.</span>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="group-meta">
+                                <div>
+                                    <strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong>
+                                    <span>2025-10-27 | 08:00</span>
+                                </div>
+                                <div>
+                                    <strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong>
+                                    <span>8</span>
+                                </div>
+                            </div>
+                            <div class="group-price">
+                                <span lang="vi">30.000 VNĐ</span>
+                                <span lang="en">$1.20</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank">
+                                <span lang="vi">Tham gia</span>
+                                <span lang="en">Join</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="group-card" data-category="hangout">
+                        <div class="card-header">
+                            <span class="tag tag-hangout"><span lang="vi">Đi chơi</span><span lang="en">Hangout</span></span>
+                            <span class="location">TP.HCM</span>
+                        </div>
+                        <div class="card-body">
+                            <h3><span lang="vi">Cà phê boardgame cuối tuần</span><span lang="en">Weekend Boardgame Cafe</span></h3>
+                            <p>
+                                <span lang="vi">Tìm 5 người cùng chơi Ma Sói, Mèo Nổ tại một quán cafe yên tĩnh Q.3.</span>
+                                <span lang="en">Looking for 5 people to play Werewolf, Exploding Kittens at a quiet cafe in D.3.</span>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="group-meta">
+                                <div>
+                                    <strong><span lang="vi">Bắt đầu:</span><span lang="en">Starts:</span></strong>
+                                    <span>2025-10-26 | 14:00</span>
+                                </div>
+                                <div>
+                                    <strong><span lang="vi">Sức chứa:</span><span lang="en">Size:</span></strong>
+                                    <span>6</span>
+                                </div>
+                            </div>
+                            <div class="group-price">
+                                <span lang="vi">5.000 VNĐ</span>
+                                <span lang="en">$0.20</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7qGUWXAAi0YOpkEW-FQ2zwKQVMt-5c7JcQW0MsLPUN8qtRA/viewform?usp=sharing&ouid=111710151782498479278" class="btn-join" target="_blank">
+                                <span lang="vi">Tham gia</span>
+                                <span lang="en">Join</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="see-all-container">
+                    <a href="groups.html" class="see-all-btn">
+                        <span lang="vi">Xem tất cả các nhóm <i class="fa-solid fa-arrow-right"></i></span>
+                        <span lang="en">See all groups <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top-container">
+            <div class="footer-col" id="footer-brand">
+                <img src="img/logo-findmate.jpg" alt="FindMate Logo">
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@findmate8?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61581945898819&locale=vi_VN" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-col" id="footer-company">
+                <h4>
+                    <span lang="vi">Công ty</span>
+                    <span lang="en">Company</span>
+                </h4>
+                <ul>
+                    <li><a href="#about"><span lang="vi">Về chúng tôi</span><span lang="en">About Us</span></a></li>
+                    <li><a href="#core-values"><span lang="vi">Giá trị</span><span lang="en">Values</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-quicklinks">
+                <h4>
+                    <span lang="vi">Liên kết nhanh</span>
+                    <span lang="en">Quick Links</span>
+                </h4>
+                <ul>
+                    <li><a href="#how-it-works"><span lang="vi">Cách hoạt động</span><span lang="en">How it Works</span></a></li>
+                    <li><a href="#audience"><span lang="vi">Đối tượng</span><span lang="en">Audience</span></a></li>
+                    <li><a href="#comparison"><span lang="vi">So sánh</span><span lang="en">Comparison</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-help">
+                <h4>
+                    <span lang="vi">Hỗ trợ</span>
+                    <span lang="en">Help</span>
+                </h4>
+                <ul>
+                    <li><a href="faq.html" target="_blank"><span lang="vi">Câu hỏi (FAQs)</span><span lang="en">FAQs</span></a></li>
+                    <li><a href="contact.html" target="_blank"><span lang="vi">Liên hệ</span><span lang="en">Contact Us</span></a></li>
+                    <li><a href="#"><span lang="vi">Địa điểm</span><span lang="en">Location</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-newsletter">
+                <h4>
+                    <span lang="vi">Nhận tin từ FindMate</span>
+                    <span lang="en">FindMate in your Inbox</span>
+                </h4>
+                <form class="newsletter-form">
+                    <p>
+                        <span lang="vi">Đăng ký để nhận tin tức mới nhất và các nhóm thú vị!</span>
+                        <span lang="en">Sign up for the latest news and interesting new groups!</span>
+                    </p>
+                    <input type="email" placeholder="Nhập email của bạn..." lang="vi">
+                    <input type="email" placeholder="Enter your email..." lang="en">
+                    <button type="submit" lang="vi">Đăng ký</button>
+                    <button type="submit" lang="en">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom-container">
+            <div class="sub-links">
+                <a href="privacy.html" target="_blank"><span lang="vi">Chính sách bảo mật</span><span lang="en">Privacy Policy</span></a> | 
+                <a href="terms.html" target="_blank"><span lang="vi">Điều khoản dịch vụ</span><span lang="en">Terms of Service</span></a>
+            </div>
+            <p class="copyright">
+                © 2025 FindMate. All rights reserved. "Find your vibe - Find your mate."
+            </p>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
