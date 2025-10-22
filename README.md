@@ -26,7 +26,8 @@ Hãy để chúng tôi giúp bạn **"Find your mate, find your vibe"**.
 
 ---
 
-## 🤝 Đóng góp
+##  Đóng góp
 
 Chúng tôi luôn hoan nghênh các ý tưởng, phản hồi và đóng góp từ cộng đồng!  
+
 
