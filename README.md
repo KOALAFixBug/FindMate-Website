@@ -14,7 +14,7 @@ Hãy để chúng tôi giúp bạn **"Find your mate, find your vibe"**.
 ---
 
 ## Social link
-* **Facebook:**  https://www.facebook.com/profile.php?id=61581907672677
+* **Facebook:** https://www.facebook.com/people/FindMate/61581945898819/
 * **Tiktok:**   https://www.tiktok.com/@findmate8?_t=ZS-90NRUiEduCb&_r=1
 * **Website:**  https://find-mate-website.vercel.app/
 
@@ -72,6 +72,7 @@ Trang web sẽ tự động mở trong trình duyệt và tự động tải l�
 ##  Đóng góp
 
 Chúng tôi luôn hoan nghênh các ý tưởng, phản hồi và đóng góp từ các bạn!  
+
 
 
 
